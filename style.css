@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -8,3 +8,124 @@
 html {
     scroll-behavior: smooth;
 }
+
+p, a, h1, h3{
+    font-family: 'Inter', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    background-color: #fdf5e6cb;
+    margin: 80px;
+    text-align: center;
+}
+
+.nav-list a{
+    transition: color 0.2s, font-size 0.2s;
+    font-size: 20px;
+
+}
+.nav-list a:hover {
+    color: #939395;
+    font-size: 30px;
+}
+
+.nav-list {
+    list-style: none; 
+    display: flex;
+    gap: 40px;
+    height: 40px;
+}
+
+.lists, .name-logo {
+    align-self: center;
+}
+.name-logo{
+    font-size: 30px;
+}
+/* remove when the h1 is out of screen */
+.nav-tools {
+    width: 50%;
+    margin-left: 50%;
+}
+
+
+
+
+
+/*add when the h1 is out of screen */
+.nav-obj-afterScrll {
+    margin: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar-shadownav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #f0f0f0;
+    z-index: 1; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fdf5e6cb;
+}
+
+
+
+
+.first-content{
+    text-align: center;
+    margin-top: 25vh;
+}
+.first-content h1 {
+    font-size: 100px;
+    line-height: 200px;
+}
+
+.first-content p {
+    color: #939395;
+    font-size: 30px;
+}
+
+.about {
+    margin-top: 80px;
+}
+
+.about h3 {
+    font-size: 50px;
+    line-height: 250px;
+}
+.aboutme-content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 50px;
+}
+
+.vid-part,.text-part {
+    text-align: left;
+    width: 45%;
+    font-size: 22px;
+    
+}
+
+.vid-part {
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden; /* Add this to hide the excess video */
+    transition: transform 0.5s;
+  }
+  
+.vid-part video {
+    width: 60%;
+    border-radius: 25px;
+    transition: transform 0.5s; /* Add this to smoothly transition the video */
+  }
+  
+.vid-part:hover {
+    transform: scale(1.4); /* Scale the video up on hover */
+  }
