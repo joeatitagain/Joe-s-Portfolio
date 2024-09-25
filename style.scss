@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p, a, h1, h3{
+    font-family: 'Inter', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    background-color: #fdf5e6cb;
+    margin: 80px;
+    text-align: center;
+}
+
+.nav-list a{
+    transition: color 0.2s, font-size 0.2s;
+    font-size: 20px;
+
+}
+.nav-list a:hover {
+    color: #939395;
+    font-size: 30px;
+}
+
+.nav-list {
+    list-style: none; 
+    display: flex;
+    gap: 40px;
+    height: 40px;
+}
+
+.lists, .name-logo {
+    align-self: center;
+}
+.name-logo{
+    font-size: 30px;
+}
+/* remove when the h1 is out of screen */
+.nav-tools {
+    width: 50%;
+    margin-left: 50%;
+}
+
+
+
+
+
+/*add when the h1 is out of screen */
+.nav-obj-afterScrll {
+    margin: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar-shadownav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #f0f0f0;
+    z-index: 1; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fdf5e6cb;
+}
+
+
+
+
+.first-content{
+    text-align: center;
+    margin-top: 25vh;
+    p {
+        color: #939395;
+        font-size: 30px;
+    }
+    h1 {
+    font-size: 100px;
+    line-height: 200px;
+    }   
+}
+   
+
+.about {
+    display: flex;
+    align-items: center;
+    height: 700px;
+    width: 1000px;
+    margin: 200px 100px;
+    border: solid 1px #D8D2C2;
+    border-radius: 25px;
+    .aboutme-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 100px;
+        .text-part {
+            text-align: right;
+            width: 45%;
+            font-size: 22px;
+            transition: transform 0.5s;
+            background-color: #D8D2C2;
+            border-radius: 25px;
+            width: 70%;
+            h3 {
+                font-size: 50px;
+                line-height: 150px;
+                margin-right: 30px;
+            }
+            p{
+                font-size: 20px;
+                margin: 0 30px 10px 50px;
+            }
+
+        }
+        .vid-part {
+            align-items: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 30%;
+            height: 315px;
+            border-radius: 15px;
+            // overflow: hidden; 
+            transition: transform 0.5s;
+            video {  
+                position:absolute;  
+                left: 50px;    
+                z-index: 2;        
+                border-radius: 25px;
+                // width: 100%;
+                // height: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+//triggger when about is hovered over 
+.vid-partOverAbout {
+    transform: scale(1.4);
+    transition: transform 0.5s;
+}                        
+    
+.text-partOverAbout{
+    transform: scale(0.9);
+}
+    
+
+
+
+
+
+
+
