@@ -18,7 +18,6 @@ p, a, h1, h3{
 body {
     background-color: #fdf5e6cb;
     margin: 80px;
-    text-align: center;
 }
 
 .nav-list a{
@@ -27,7 +26,7 @@ body {
 
 }
 .nav-list a:hover {
-    color: #939395;
+    // color: #D8D2C2;
     font-size: 30px;
 }
 
@@ -42,35 +41,38 @@ body {
     align-self: center;
 }
 .name-logo{
-    font-size: 30px;
-}
-/* remove when the h1 is out of screen */
-.nav-tools {
-    width: 50%;
-    margin-left: 50%;
+    font-size: 20px;
 }
 
-
-
-
-
-/*add when the h1 is out of screen */
 .nav-obj-afterScrll {
-    margin: 20px 40px;
+    margin: 10px 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
+
+// add to #nav-bar 
 .nav-bar-shadownav{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 70px;
     background-color: #f0f0f0;
-    z-index: 1; 
+    z-index: 3; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fdf5e6cb;
+    animation: dropdown 0.8s forwards;
+}
+
+@keyframes dropdown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
 }
 
 
@@ -92,29 +94,29 @@ body {
 .text-one {
     opacity: 0;
     position: relative;
-    top: 50px; /* or any other value that moves it off-screen */
+    top: 50px;
 }
 
 .text-two {
     opacity: 0;
 }
 
-.about {
+#about {
     display: flex;
     align-items: center;
     height: 700px;
     width: 1000px;
-    margin: 200px 100px;
+    margin: 300px auto;
     border:dashed 4px #D8D2C2;
     border-radius: 25px;
+
     .aboutme-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 100px;
-        .text-part {
-            text-align: right;
-            width: 45%;
+        #text-part {
+            text-align: right;          
             font-size: 22px;
             transition: transform 0.5s;
             background-color: #D8D2C2;
@@ -127,11 +129,11 @@ body {
             }
             p{
                 font-size: 20px;
-                margin: 0 30px 10px 90px;
+                margin: 0 30px 20px 90px;
             }
 
         }
-        .vid-part {
+        #vid-part {
             align-items: center;
             position: relative;
             display: flex;
@@ -157,12 +159,13 @@ body {
 
 
 //triggger when about is hovered over 
+//add to vid-part
 .vid-partOverAbout {
-    transform: scale(1.4);
+    transform: scale(1.1);
     transition: transform 0.5s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }                        
-    
+//add to text part   
 .text-partOverAbout{
     transform: scale(0.9);
 }

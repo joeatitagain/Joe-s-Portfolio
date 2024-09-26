@@ -16,17 +16,31 @@ $('.text-two').delay(2000).animate({
     easing: 'swing'
 });
 
-var textTwo = $('#text-two');
+
+
+var textTwo = $('#textTwo');
+
 $(window).scroll(function() {
     var textTwoTop = textTwo.offset().top;
     var scrollTop = $(window).scrollTop();
+    var textTwoHeight = textTwo.height();
   
-    if (scrollTop > textTwoTop) {
-        $('nav-list').removeClass('nav-tools').addClass('.nav-obj-afterScrl');
-        var finalNav = $('nav-obj')
-        var newContent =$('<div class="name-logo"><p>Joe Aneto</p></div>')
-        finalNav.append(newContent)
-    }
+    if (scrollTop > textTwoTop + textTwoHeight) {
+      $('#navBar').addClass('nav-bar-shadownav');
+      $('.name-logo').empty().append("<h1>Joe's Portfolio</h1>");
+    }else{
+      $('#navBar').removeClass('nav-bar-shadownav');
+      $('.name-logo').empty();
+    }  
 });
 
-  
+$('#about').mouseover(function() {
+  $('video').get(0).play();
+  $('video').addClass('vid-partOverAbout');
+  $('#text-part').addClass('text-partOverAbout');
+});
+$('#about').mouseout(function() {
+  $('video').get(0).pause();
+  $('video').removeClass('vid-partOverAbout');
+  $('#text-part').removeClass('text-partOverAbout');
+})
