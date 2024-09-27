@@ -1,3 +1,8 @@
+const slider = document.querySelector('.slider') 
+const sections = gsap.utils.toArray(".slider section") 
+const words = gsap.utils.toArray("p")
+
+
 $('.text-one').delay(500).animate({
     opacity: 1,
     top: '0px'
@@ -44,3 +49,23 @@ $('#about').mouseout(function() {
   $('video').removeClass('vid-partOverAbout');
   $('#text-part').removeClass('text-partOverAbout');
 })
+
+
+const tl = gsap.timeline({
+  defaults: {
+      ease: "none"
+  },
+  scrollTrigger: {
+      trigger: slider,
+      pin: true,
+      scrub: 2,
+      end: () =>  "+=" + slider.offsetWidth
+  }
+})
+
+tl.to(slider, {
+  xPercent: -66
+})
+
+
+const 

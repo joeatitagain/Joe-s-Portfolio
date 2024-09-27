@@ -153,14 +153,43 @@ body {
   transform: scale(0.9);
 }
 
-.skill-stack {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  flex-flow: row;
-  font-size: 30px;
+.outer {
+  overflow-x: hidden;
 }
-.skill-stack .stackLogo {
-  height: 80px;
-  width: 80px;
+
+.slider {
+  display: flex;
+  width: 1055vw;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+}
+section .inner {
+  margin: 10em;
+  position: relative;
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+section .inner p {
+  font-size: 7em;
+  margin: auto, 100px;
+}
+section .inner h3 {
+  font-size: 7em;
+}
+section .flexLogo {
+  display: flex;
+  height: auto;
+  width: 500vw;
+  justify-content: space-evenly;
+}
+section .flexLogo .stackLogo {
+  width: 300px;
+}
+section .lastGiphy {
+  justify-self: end;
 }/*# sourceMappingURL=style.css.map */

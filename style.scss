@@ -18,6 +18,7 @@ p, a, h1, h3{
 body {
     background-color: #fdf5e6cb;
     margin: 80px;
+    // overflow-x: hidden;
 }
 
 .nav-list a{
@@ -171,22 +172,68 @@ body {
 }
 
 
+.outer {
+    overflow-x: hidden;
+}
 
-
-.skill-stack {
+.slider {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    flex-flow: row;
-    font-size: 30px;
-    .stackLogo {
-        height: 80px;
-        width: 80px;
+    width: 1055vw;
+    height: 100vh;
+}
+
+
+section {
+    display: flex;
+    .inner{
+        margin: 10em;
+        position : relative;
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            font-size: 7em;
+            margin: auto, 100px;
+        }
+        h3{
+            font-size: 7em;
+        }
+    }
+    .flexLogo{
+        display: flex;
+        height: auto;
+        width: 500vw;
+        justify-content: space-evenly;
+        .stackLogo{
+            width: 300px;
+        }
+    }
+    .lastGiphy{
+        justify-self: end;
     }
 }
 
 
 
+//.skill-stack {
+    // display: flex;
+    // overflow-x: hidden;
+    // font-size: 30px;
+    // width: 600vw;
+    // margin: 50vh 0 0;
+    // section{
+    //     display: flex;
+    //     width: 50vw;
+    // }
+    // .logo-section{
+    //     width: 200vw
+    // }
+    // .stackLogo {
+    //     height: 80px;
+    //     width: 80px;
+    // }
+//}
 
 
 
