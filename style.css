@@ -25,6 +25,7 @@ body {
 }
 
 .nav-list a:hover {
+  color: #4A4947;
   font-size: 30px;
 }
 
@@ -159,27 +160,32 @@ body {
 
 .slider {
   display: flex;
-  width: 1055vw;
+  width: 1200vw;
   height: 100vh;
+  margin-left: 30%;
 }
 
 section {
   display: flex;
-}
-section .inner {
-  margin: 10em;
-  position: relative;
-  display: flex;
-  height: auto;
   align-items: center;
-  justify-content: space-between;
+}
+section .inner #stackText {
+  position: relative;
+  height: auto;
+  font-size: 7em;
+  line-height: 0.9em;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 section .inner p {
   font-size: 7em;
-  margin: auto, 100px;
 }
-section .inner h3 {
-  font-size: 7em;
+section #introText {
+  position: relative;
+  padding: 0 200px;
+  text-align: center;
+  font-size: 90px;
+  margin-left: 350px;
 }
 section .flexLogo {
   display: flex;
@@ -192,4 +198,9 @@ section .flexLogo .stackLogo {
 }
 section .lastGiphy {
   justify-self: end;
+}
+
+#stackText .char {
+  transform: translateY(115px);
+  transition: transform 0.5s;
 }/*# sourceMappingURL=style.css.map */

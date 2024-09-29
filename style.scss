@@ -27,7 +27,7 @@ body {
 
 }
 .nav-list a:hover {
-    // color: #D8D2C2;
+    color: #4A4947;
     font-size: 30px;
 }
 
@@ -68,11 +68,11 @@ body {
 }
 
 @keyframes dropdown {
-    0% {
-      transform: translateY(-100%);
+    0% { 
+        transform: translateY(-100%);
     }
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -91,7 +91,7 @@ body {
     line-height: 200px;
     }   
 }
-   
+
 .text-one {
     opacity: 0;
     position: relative;
@@ -178,27 +178,34 @@ body {
 
 .slider {
     display: flex;
-    width: 1055vw;
+    width: 1200vw;
     height: 100vh;
+    margin-left: 30%;
 }
 
 
 section {
     display: flex;
+    align-items: center;
     .inner{
-        margin: 10em;
-        position : relative;
-        display: flex;
-        height: auto;
-        align-items: center;
-        justify-content: space-between;
+    
+        #stackText{
+            position : relative;
+            height: auto;
+            font-size: 7em;
+            line-height: .9em;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
         p{
             font-size: 7em;
-            margin: auto, 100px;
         }
-        h3{
-            font-size: 7em;
-        }
+    }
+    #introText{
+        position: relative;
+        padding: 0 200px;
+        text-align: center;
+        font-size: 90px;
+        margin-left: 350px;
     }
     .flexLogo{
         display: flex;
@@ -207,6 +214,7 @@ section {
         justify-content: space-evenly;
         .stackLogo{
             width: 300px;
+            
         }
     }
     .lastGiphy{
@@ -214,26 +222,9 @@ section {
     }
 }
 
-
-
-//.skill-stack {
-    // display: flex;
-    // overflow-x: hidden;
-    // font-size: 30px;
-    // width: 600vw;
-    // margin: 50vh 0 0;
-    // section{
-    //     display: flex;
-    //     width: 50vw;
-    // }
-    // .logo-section{
-    //     width: 200vw
-    // }
-    // .stackLogo {
-    //     height: 80px;
-    //     width: 80px;
-    // }
-//}
-
+#stackText .char {
+    transform: translateY(115px);
+    transition: transform .5s;
+}
 
 

@@ -3,6 +3,7 @@ const sections = gsap.utils.toArray(".slider section")
 const words = gsap.utils.toArray("p")
 
 
+
 $('.text-one').delay(500).animate({
     opacity: 1,
     top: '0px'
@@ -68,4 +69,68 @@ tl.to(slider, {
 })
 
 
-const 
+const stackText = $("#stackText")
+const firstText = new SplitType (stackText)
+
+gsap.to('.char', {
+  y: 0,
+  stagger: 0.05,
+  delay: 0.2,
+  ease: 'back.out',
+  duration: .5,
+  scrollTrigger: {
+    trigger: slider, 
+    start: 'top center',
+    end: '+=500', 
+    scrub: true, 
+  }
+})
+
+
+gsap.registerPlugin(ScrollTrigger)
+
+const splitTypes = $('#introText').toArray()
+const text = new  SplitType(splitTypes)
+const introText = document.getElementById('introText');
+
+
+
+  gsap.from('#introText .char', {
+  scrollTrigger: {
+    trigger: introText,
+    start: 'top -3000px',
+    end: '+=2000',
+    scrub: true,
+    delay: 1,
+    onLoad:  () => {
+      ScrollTrigger.refresh();
+    }
+  },
+  opacity: 0.2,
+  stagger: 0.9,
+
+})
+
+gsap.from('.stackLogo', {
+  scale: 0.5, // initial scale
+  scrollTrigger: {
+    trigger: '#stackText', // container element that holds the logos
+    start: 'center center', // start of the trigger element
+    end: '+=500', // end of the trigger element (optional)
+    scrub: true, // enable scrubbing
+    onEnter: () => {
+      gsap.to('.stackLogo', {
+        scale: 1, // scale up to 1
+        duration: 1, // animation duration
+        ease: 'power2.inOut' // easing function
+      });
+    },
+    onLeave: () => {
+      gsap.to('.stackLogo', {
+        scale: 0.5, // scale back down to 0.5
+        duration: 1, // animation duration
+        ease: 'power2.inOut' // easing function
+      });
+    }
+  }
+});
