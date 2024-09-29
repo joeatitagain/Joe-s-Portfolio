@@ -97,40 +97,71 @@ const introText = document.getElementById('introText');
 
   gsap.from('#introText .char', {
   scrollTrigger: {
-    trigger: introText,
-    start: 'top -3000px',
+    trigger: '#introText .word',
+    start: '300px top',
     end: '+=2000',
     scrub: true,
-    delay: 1,
+    
     onLoad:  () => {
       ScrollTrigger.refresh();
     }
   },
-  opacity: 0.2,
+  opacity: 0.01,
   stagger: 0.9,
 
 })
 
-gsap.from('.stackLogo', {
-  scale: 0.5, // initial scale
-  scrollTrigger: {
-    trigger: '#stackText', // container element that holds the logos
-    start: 'center center', // start of the trigger element
-    end: '+=500', // end of the trigger element (optional)
-    scrub: true, // enable scrubbing
-    onEnter: () => {
-      gsap.to('.stackLogo', {
-        scale: 1, // scale up to 1
-        duration: 1, // animation duration
-        ease: 'power2.inOut' // easing function
-      });
-    },
-    onLeave: () => {
-      gsap.to('.stackLogo', {
-        scale: 0.5, // scale back down to 0.5
-        duration: 1, // animation duration
-        ease: 'power2.inOut' // easing function
-      });
+
+
+const objCollection = document.getElementsByClassName('trn');
+
+
+
+Array.prototype.forEach.call(objCollection, function(obj) {
+
+  function isObjectInMiddle() {
+    const rect = obj.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+  
+    const objCenter = rect.left + (rect.width / 2);
+    const viewportCenter = viewportWidth / 2;
+  
+    const threshold = 100; // adjust this value to change the sensitivity
+  
+    if (Math.abs(objCenter - viewportCenter) < threshold && rect.right > 0 && rect.left < viewportWidth) {
+      obj.classList.add('in-view');
+    } else {
+      // Remove the class from the object
+      obj.classList.remove('in-view');
     }
   }
+  
+  // Call the function on scroll
+  window.addEventListener('scroll', isObjectInMiddle);
+  
+  // Call the function on load
+  isObjectInMiddle();
 });
+
+
+
+
+const endSplitTypes = $('#endText').toArray()
+const endtext = new  SplitType(endSplitTypes)
+const endText = $('#endText');
+
+gsap.from('#endText .char', {
+  scrollTrigger: {
+    trigger: '#endText .char',
+    start: '10700px top',
+    end: '11800px top',
+    scrub: true,
+    onLoad: ()  => {
+      ScrollTrigger.refresh();
+    }
+  },
+    scaleY: 0,
+    y: -20,
+    transformOrigin: 'top',
+    stagger: 0.1
+})

@@ -22,7 +22,8 @@ body {
 }
 
 .nav-list a{
-    transition: color 0.2s, font-size 0.2s;
+    transition: color 0.2s, 
+    font-size 0.2s;
     font-size: 20px;
 
 }
@@ -178,7 +179,7 @@ body {
 
 .slider {
     display: flex;
-    width: 1200vw;
+    width: 1100vw;
     height: 100vh;
     margin-left: 30%;
 }
@@ -190,6 +191,7 @@ section {
     .inner{
     
         #stackText{
+            padding: 0 200px 0 100px;
             position : relative;
             height: auto;
             font-size: 7em;
@@ -199,18 +201,25 @@ section {
         p{
             font-size: 7em;
         }
+        .stackLogo{
+            transform: scale(0.8);
+            transition: transform 0.3s ease-in-out;
+        }
+        .in-view{
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
     }
     #introText{
         position: relative;
-        padding: 0 200px;
         text-align: center;
         font-size: 90px;
-        margin-left: 350px;
     }
     .flexLogo{
         display: flex;
         height: auto;
-        width: 500vw;
+        width: 400vw;
         justify-content: space-evenly;
         .stackLogo{
             width: 300px;
@@ -220,6 +229,12 @@ section {
     .lastGiphy{
         justify-self: end;
     }
+    #endText{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        padding: 0  600px 0 0;
+
+    }
+
 }
 
 #stackText .char {
