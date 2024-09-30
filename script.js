@@ -165,3 +165,20 @@ gsap.from('#endText .char', {
     transformOrigin: 'top',
     stagger: 0.1
 })
+
+gsap.set(".photo:not(:first-child)", { yPercent:101})
+
+const animation = gsap.to(".photo:not(:first-child)", {
+	yPercent:0, duration:1, stagger:1
+})
+
+ScrollTrigger.create({
+	trigger:".gallery",
+	start:"top 5%",
+	end:"65% top",
+	pin:".right",
+	animation: animation,
+	scrub:true,
+
+})
+
