@@ -182,3 +182,26 @@ ScrollTrigger.create({
 
 })
 
+$(window).scroll(function() {
+  if ($("#find-me").offset().top <= $(window).scrollTop()) {
+    $(".nav-bar-shadownav").hide();
+  } else {
+    $(".nav-bar-shadownav").show();
+  }
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+gsap.to(".panel:not(:last-child)", {
+  yPercent: -100, 
+  ease: "none",
+  stagger: 0.5,
+  scrollTrigger: {
+    trigger: "#container",
+    start: "top 9%",
+    end: "top",
+    scrub: true,
+    pin: true
+  }
+}).set(".panel:first-child", { zIndex: 1 });

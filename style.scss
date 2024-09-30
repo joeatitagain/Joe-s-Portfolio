@@ -17,8 +17,7 @@ p, a, h1, h3, div{
 
 body {
     background-color: #fdf5e6cb;
-    margin: 80px;
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .nav-list a{
@@ -286,7 +285,7 @@ section {
         .headline {
             height: 2em;
             width:100%;
-            font-size: 50px;
+            font-size: 45px;
         }     
         .text {
             margin:0.8em 0 0 0;
@@ -294,13 +293,19 @@ section {
             font-size: 20px;
         }
         button{
-            border: solid black 1px;
+            border: solid #B17457 1px;
             background-color: #f0f0f000;
             height: 40px;
             border-radius: 20px;
             margin: 20px 0 0 0;
             a{
                 margin: 30px 30px;
+            }
+        }
+        button:hover{
+            background-color: #B17457;
+            a{
+                color: #f0f0f0;
             }
         }
     }
@@ -334,4 +339,94 @@ section {
         height: auto;
     }
 }
+#container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 
+}
+.find-me-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #4A4947; /* Your background color here */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    p {
+        color: #939395;
+        line-height: 100px;
+        height: 50%;
+        
+    }
+    a{
+        color: #D8D2C2;
+        font-weight: 500;
+        font-size: 60px;
+    }
+    h3 > a {
+        line-height: 200px;
+    }
+    h3 > a:hover{
+        color: #b7b4ab;
+    }
+    .right-side {
+        display: flex;
+        align-items: end;
+        width: 20%;
+        .socials{
+            text-align: right;
+            h3{
+                color: #939395;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 200px;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                color: #D8D2C2;
+                li>a{
+                    font-size: 15px;
+                }
+            }
+            ul>li>a:hover{
+                color: #b7b4ab;
+            }
+        }
+    }
+}
+
+.emptydiv{
+    height: 100vh;
+    width: 100%;
+    background-color: #fdf5e6;
+    .litNote{
+        text-align: center;
+        font-size: 90px;
+        p{
+            margin: auto;
+        }
+    }
+    >div{
+        font-size: 60px;
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+        margin: auto;
+    }
+}
+.panel {
+    position: absolute;
+    will-change: transform;
+    width: 100%;
+}
+.panel:first-child {
+    z-index: 1;
+}
