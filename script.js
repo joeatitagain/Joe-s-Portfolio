@@ -198,10 +198,11 @@ gsap.to(".panel:not(:last-child)", {
   stagger: 0.5,
   scrollTrigger: {
     trigger: "#container",
-    start: "top 9%",
-    end: "top",
+    start: "top 30%",
+    end: "top 5%",
     scrub: true,
-    pin: true
+    pin: true,
+    invalidateOnRefresh: true,
   }
 })
 
