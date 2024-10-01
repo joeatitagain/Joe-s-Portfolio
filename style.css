@@ -15,7 +15,7 @@ p, a, h1, h3, div {
 }
 
 body {
-  background-color: rgba(253, 245, 230, 0.7960784314);
+  background-color: red;
   overflow-x: hidden;
   margin-top: 80px;
 }
@@ -399,4 +399,10 @@ section #endText {
 
 .panel:first-child {
   z-index: 1;
+}
+
+@media not (min-width: 1023px) {
+  body {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

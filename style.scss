@@ -431,3 +431,14 @@ section {
 .panel:first-child {
     z-index: 1;
 }
+
+
+@media (not (min-width: 1023px)) {
+
+    body {
+  
+        display: none;
+  
+    }
+  
+}
