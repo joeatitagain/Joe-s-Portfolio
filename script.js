@@ -40,12 +40,12 @@ $(window).scroll(function() {
     }  
 });
 
-$('#about').mouseover(function() {
+$('#AboutMe').mouseover(function() {
   $('video').get(0).play();
   $('video').addClass('vid-partOverAbout');
   $('#text-part').addClass('text-partOverAbout');
 });
-$('#about').mouseout(function() {
+$('#AboutMe').mouseout(function() {
   $('video').get(0).pause();
   $('video').removeClass('vid-partOverAbout');
   $('#text-part').removeClass('text-partOverAbout');
@@ -76,7 +76,6 @@ gsap.to('.char', {
   y: 0,
   stagger: 0.05,
   delay: 0.2,
-  ease: 'back.out',
   duration: .5,
   scrollTrigger: {
     trigger: slider, 
@@ -183,7 +182,7 @@ ScrollTrigger.create({
 })
 
 $(window).scroll(function() {
-  if ($("#find-me").offset().top <= $(window).scrollTop()) {
+  if ($("#ContactMe").offset().top <= $(window).scrollTop()) {
     $(".nav-bar-shadownav").hide();
   } else {
     $(".nav-bar-shadownav").show();
@@ -204,4 +203,20 @@ gsap.to(".panel:not(:last-child)", {
     scrub: true,
     pin: true
   }
-}).set(".panel:first-child", { zIndex: 1 });
+})
+
+$('nav a').on('click', function(event) {
+  // Prevent default link behavior
+  event.preventDefault();
+
+  // Get the ID of the section to scroll to
+  const sectionId = $(this).attr('href').slice(1);
+
+  // Get the section element
+  const section = $('#' + sectionId);
+
+  // Smooth scroll to the section
+  $('html, body').animate({
+    scrollTop: section.offset().top
+  }, 1000); // adjust the animation duration as needed
+});

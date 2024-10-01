@@ -17,6 +17,7 @@ p, a, h1, h3, div {
 body {
   background-color: rgba(253, 245, 230, 0.7960784314);
   overflow-x: hidden;
+  margin-top: 80px;
 }
 
 .nav-list a {
@@ -95,7 +96,7 @@ body {
   opacity: 0;
 }
 
-#about {
+#AboutMe {
   display: flex;
   align-items: center;
   height: 700px;
@@ -104,13 +105,13 @@ body {
   border: dashed 4px #D8D2C2;
   border-radius: 25px;
 }
-#about .aboutme-content {
+#AboutMe .aboutme-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 100px;
 }
-#about .aboutme-content #text-part {
+#AboutMe .aboutme-content #text-part {
   text-align: right;
   font-size: 22px;
   transition: transform 0.5s;
@@ -118,16 +119,16 @@ body {
   border-radius: 25px;
   width: 70%;
 }
-#about .aboutme-content #text-part h3 {
+#AboutMe .aboutme-content #text-part h3 {
   font-size: 50px;
   line-height: 150px;
   margin-right: 30px;
 }
-#about .aboutme-content #text-part p {
+#AboutMe .aboutme-content #text-part p {
   font-size: 20px;
   margin: 0 30px 20px 90px;
 }
-#about .aboutme-content #vid-part {
+#AboutMe .aboutme-content #vid-part {
   align-items: center;
   position: relative;
   display: flex;
@@ -137,7 +138,7 @@ body {
   border-radius: 15px;
   transition: transform 0.5s;
 }
-#about .aboutme-content #vid-part video {
+#AboutMe .aboutme-content #vid-part video {
   position: absolute;
   left: 50px;
   z-index: 2;
@@ -170,7 +171,7 @@ section {
   align-items: center;
 }
 section .inner #stackText {
-  padding: 0 200px 0 100px;
+  padding: 0 200px 0 0;
   position: relative;
   height: auto;
   font-size: 7em;

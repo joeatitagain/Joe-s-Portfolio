@@ -18,6 +18,7 @@ p, a, h1, h3, div{
 body {
     background-color: #fdf5e6cb;
     overflow-x: hidden;
+    margin-top: 80px;
 }
 
 .nav-list a{
@@ -102,7 +103,7 @@ body {
     opacity: 0;
 }
 
-#about {
+#AboutMe {
     display: flex;
     align-items: center;
     height: 700px;
@@ -190,7 +191,7 @@ section {
     .inner{
     
         #stackText{
-            padding: 0 200px 0 100px;
+            padding: 0 200px 0 0;
             position : relative;
             height: auto;
             font-size: 7em;
