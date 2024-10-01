@@ -15,7 +15,7 @@ p, a, h1, h3, div {
 }
 
 body {
-  background-color: red;
+  background-color: rgba(253, 245, 230, 0.7960784314);
   overflow-x: hidden;
   margin-top: 80px;
 }
